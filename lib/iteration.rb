@@ -1,11 +1,12 @@
 def join_ingredients(src)
-  new_array = []
-  i = 0
-  while i < src.length do 
-    new_array.push("I love #{src[i][0]} and #{src[i][1]} on my pizza")
-    i += 1
-  end
-  new_array
+  array = []
+  row_index = 0
+while row_index < src.count do
+  element_index = 0
+  array[row_index] = "I love #{src[row_index][0]} and #{src[row_index][1]} on my pizza"
+      row_index += 1
+end
+array
   
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
@@ -17,13 +18,13 @@ def join_ingredients(src)
 end
 
 def find_greater_pair(src)
-  new_array = []
-  i = 0
-  while i < src.length do
-    new_array.push(src[i].max)
-    i += 1
-  end
-  new_array
+ array = []
+  row_index = 0
+while row_index < src.count do
+  array[row_index] = src[row_index].max
+  row_index += 1
+end
+array
   
   
   
@@ -34,16 +35,16 @@ def find_greater_pair(src)
 end
 
 def total_even_pairs(src)
-  total = 0
-  i = 0
-  while i < src.length do
-    if (src[i][0] % 2 == 0) && (src[i][1] % 2 == 0)
-      total += (src[i][0] + src[i][1])
-    end
-    i += 1
-  end
+    total = 0
+row_index = 0
+while row_index < src.count do
+    if src[row_index][0] % 2 == 0 && src[row_index][1] % 2 == 0
+    total += src[row_index][0] + src[row_index][1]
+end
+    row_index += 1
+end
   
-  total
+total
   
   
   
