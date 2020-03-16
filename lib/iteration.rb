@@ -1,11 +1,12 @@
 def join_ingredients(src)
-  new_array = []
-  i = 0
-  while i < src.length do 
-    new_array.push("I love #{src[i][0]} and #{src[i][1]} on my pizza")
-    i += 1
-  end
-  new_array
+  array = []
+  row_index = 0
+while row_index < src.count do
+  element_index = 0
+  array[row_index] = "I love #{src[row_index][0]} and #{src[row_index][1]} on my pizza"
+      row_index += 1
+end
+array
   
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
